@@ -131,7 +131,7 @@ namespace Pre_populate_Pdf
             var actual = sut.SetTextboxesToReadOnly(inputStream, outputStrem, fieldsToDisable);
 
             //---------------------------Assert---------------------------------------
-            var expectedBytes = 109830;
+            var expectedBytes = 110124;
             Assert.AreEqual(expectedBytes, actual.Length);
 
         }
