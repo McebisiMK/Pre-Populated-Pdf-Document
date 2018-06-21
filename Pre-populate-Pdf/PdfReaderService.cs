@@ -16,7 +16,7 @@ namespace Pre_populate_Pdf
             _appSid = ConfigurationManager.AppSettings["APPSID"];
         }
 
-        public string GetPopulatedPdfValues(string fileName, string fieldName)
+        public string GetPdfDocumentValues(string fileName, string fieldName)
         {
             var target = new PdfApi(_apiKey, _appSid);
             var apiResponse = target.GetField(fileName, fieldName);

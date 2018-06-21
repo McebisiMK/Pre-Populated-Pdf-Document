@@ -103,7 +103,7 @@ namespace Pre_populate_Pdf
         [TestCase("FirstName", "Mcebisi")]
         [TestCase("Surname", "Mkhohliwe")]
         [TestCase("DateOfBirth", "1900-02-09")]
-        public void GetPopulatedPdfValues_GivenAnExistingPdfFile_ShouldGetRequestedField(string fieldName, string expected)
+        public void GetPdfDocumentValues_GivenAnExistingPdfFile_ShouldGetRequestedField(string fieldName, string expected)
         {
             //---------------Arrange------------------
             string filename = "Boot_camp_form _v2.pdf";
@@ -111,7 +111,7 @@ namespace Pre_populate_Pdf
             var sut = new PdfReaderService();
 
             //---------------Act------------------
-            var actual = sut.GetPopulatedPdfValues(filename, fieldName);
+            var actual = sut.GetPdfDocumentValues(filename, fieldName);
 
             //---------------Assert------------------
             Assert.AreEqual(expected, actual);
